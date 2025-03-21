@@ -23,7 +23,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution URL](https://github.com/leosauberman/nft-preview-card.git)
-- Live Site URL: [Live site](https://your-live-site-url.com)
+- Live Site URL: [Live site](https://leosauberman.github.io/nft-preview-card/)
 
 ## My process
 
