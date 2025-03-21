@@ -1,0 +1,126 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --cyan-transparent: hsla(178, 100%, 50%, 0.5);
+}
+
+body {
+  background-color: var(--very-dark-blue-main);
+  font: 18px 'Outfit', sans-serif;
+}
+
+.card {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.5);
+  margin: 50px auto;
+  padding: 20px;
+  background-color: var(--very-dark-blue-card);
+  color: var(--soft-blue);
+}
+
+.card .image-view {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.card .image-view > img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  display: block;
+}
+
+.card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--cyan-transparent);
+  border-radius: 10px;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card .image-view:hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.card .overlay img {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+
+.card h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0;
+  color: var(--white);
+}
+
+.card p {
+  font-weight: 300;
+}
+
+.card .info {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  border-bottom: 1px solid var(--very-dark-blue-line);
+}
+
+.card .info div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card .info img {
+  width: 15px;
+  height: 15px;
+}
+
+.card .info .price img {
+  width: 10px;
+}
+
+.card .info .price p {
+  color: var(--cyan);
+  font-weight: 400;
+}
+
+.card .creator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.card .creator img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+}
+
+.card .creator span {
+  color: var(--white);
+}
+
+.card h1:hover,
+.card .creator span:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
